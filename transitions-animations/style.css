@@ -1,0 +1,101 @@
+/* .box:active, */
+/* .box:hover {
+  color: greenyellow;
+}
+
+input:focus {
+  background-color: hotpink;
+} */
+
+body {
+  height: 100vh;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* specifies the duration of the transition */
+
+  transition-duration: 4000ms;
+
+  /* if used, will apply the transition only on selected properties */
+
+  transition-property: width, height;
+
+  /* delays the start of the transition */
+
+  transition-delay: 500ms;
+  transition-timing-function: ease-in;
+
+  /* shorthand */
+  /* property, duration, timing-function, delay */
+
+  /* transition: width 3s linear 1s, background-color 2s; */
+
+  /* only duration is necessary */
+  /* transition: 2s; */
+}
+
+.box:hover {
+  background-color: chartreuse;
+
+  width: 200px;
+  height: 200px;
+
+  transition: 1s 1s;
+}
+
+.box:active {
+  background-color: crimson;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: 1s;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background-color: deeppink;
+
+  animation-name: mySlide;
+  animation-duration: 3s;
+
+  /* short hand */
+  /* animation: mySlide 3s; */
+
+  /* optional */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 800ms;
+}
+
+.ball:hover {
+  animation-play-state: paused;
+}
+
+@keyframes mySlide {
+  0% {
+  }
+
+  10% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    margin-left: 70%;
+    transform: translate(-70%) scale(1.5);
+  }
+
+  100% {
+    margin-left: 100%;
+    transform: translate(-100%) scale(2);
+  }
+}
