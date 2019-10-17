@@ -1,0 +1,35 @@
+body {
+  background-color: hotpink;
+}
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  /* 2em == 2 * 16px */
+  font-size: 2em;
+}
+
+li {
+  /* 0.5 * font-size of parent element 
+  0.5em === 0.5 * 32px
+   */
+
+  /* font-size: 0.5em; */
+
+  /* font-size: 16px; */
+
+  /* font-size: 1.5rem; */
+  /* font-size: 24px; */
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 30px;
+  }
+
+  body {
+    background-color: lightblue;
+  }
+}

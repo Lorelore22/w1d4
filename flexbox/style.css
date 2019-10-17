@@ -1,3 +1,7 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 * {
   margin: 0;
 }
@@ -5,20 +9,21 @@
 /* flex container */
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
 
   /* default for flex-wrap is nowrap */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
 }
 
 /* flex items */
 .box {
-  text-align: center;
-  border: 2px solid plum;
+  /* text-align: center; */
+  /* border: 2px solid plum; */
 
   /* flex-basis sets the width or height of the flex item depending on the direction */
   /* flex-basis: 80px; */
@@ -35,14 +40,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+  align-items: center;
 
-.container :nth-child(3) {
-  flex: 2;
-  /* default order is 0 */
-  order: 1;
+  color: white;
+  font-size: 50px;
+
+  background-position: center;
+  background-size: cover;
 }
 
 .container :nth-child(1) {
-  order: 2;
+  background-image: url("https://images.unsplash.com/photo-1564166820921-2b102dad13fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80");
+}
+
+.container :nth-child(2) {
+  background-image: url("https://images.unsplash.com/photo-1569379148472-0d93fe564573?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80");
+}
+
+.container :nth-child(3) {
+  background-image: url("https://images.unsplash.com/photo-1561471648-631bc475428d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=316&q=80");
+}
+
+.container :nth-child(4) {
+  background-image: url("https://images.unsplash.com/photo-1561056532-2d709f79aa7b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80");
+}
+
+.container :nth-child(5) {
+  background-image: url("https://images.unsplash.com/photo-1468127225977-85bc4aa3fe0f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80");
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    /* display: flex; */
+    flex-direction: column;
+  }
 }
