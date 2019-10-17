@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+}
+
+/* flex container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  /* default for flex-wrap is nowrap */
+  flex-wrap: wrap;
+
+  align-items: center;
+  height: 100vh;
+}
+
+/* flex items */
+.box {
+  text-align: center;
+  border: 2px solid plum;
+
+  /* flex-basis sets the width or height of the flex item depending on the direction */
+  /* flex-basis: 80px; */
+  /* width: 80px; */
+
+  flex: 1;
+  /* 
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0
+   */
+  /* order: 3; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container :nth-child(3) {
+  flex: 2;
+  /* default order is 0 */
+  order: 1;
+}
+
+.container :nth-child(1) {
+  order: 2;
+}
